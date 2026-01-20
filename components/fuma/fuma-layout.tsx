@@ -7,6 +7,7 @@ import type { HTMLAttributes, ReactNode } from "react";
 
 export interface DocsLayoutProps extends BaseLayoutProps {
   tree: PageTree.Root;
+  children?: ReactNode;
 
   /**
    * Props for the `div` container

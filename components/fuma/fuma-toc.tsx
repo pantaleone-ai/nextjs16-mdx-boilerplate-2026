@@ -47,7 +47,7 @@ export function Toc(props: HTMLAttributes<HTMLDivElement>) {
   return (
     <motion.div
       id="nd-toc"
-      {...(props as ComponentProps<typeof motion.div>)}
+      {...(props as unknown as ComponentProps<typeof motion.div>)}
       className={cn(
         "sticky top-[calc(var(--fd-banner-height,0px)+var(--fd-nav-height,0px))] h-(--fd-toc-height) pb-2 pl-4 border-l border-border-edge border-dashed bg-accent/20 dark:bg-accent/10",
         toc,

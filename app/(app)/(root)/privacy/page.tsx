@@ -71,7 +71,7 @@ export default async function PrivacyPage() {
         <SeparatorHorizontal short={true} />
         <div className="border-border relative min-h-52 max-w-full">
           <DocsLayout
-            tree={privacySource.pageTree}
+            tree={privacySource.pageTree as any}
             containerProps={{ className: "relative bg-transparent" }}
           >
             <DocsPage toc={pageData.toc}>

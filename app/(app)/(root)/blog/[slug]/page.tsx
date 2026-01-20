@@ -180,7 +180,7 @@ export default async function BlogPost({ params }: BlogPostPageProps) {
         />
         <SeparatorHorizontal short={true} />
         <div className="mx-auto w-full max-w-5xl">
-          <DocsLayout tree={blogSource.pageTree}>
+          <DocsLayout tree={blogSource.pageTree as any}>
             {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
             <DocsPage toc={(page.data as any).toc ?? []}>
               <DocsBody>

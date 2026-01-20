@@ -27,7 +27,7 @@ export function loadConfig(): SiteConfig {
       if (validation.success) {
         config = mergeConfig(validation.data)
       } else {
-        console.warn('Invalid configuration in site-config.json:', validation.errors.format())
+        console.warn('Invalid configuration in site-config.json:', (validation as any).errors?.format?.() || 'Unknown validation error')
         // Continue with defaults
       }
     } catch (error) {
@@ -42,7 +42,7 @@ export function loadConfig(): SiteConfig {
   // Validate final configuration
   const validation = validateConfig(config)
   if (!validation.success) {
-    console.error('Invalid final configuration:', validation.errors.format())
+    console.error('Invalid final configuration:', (validation as any).error?.format?.() || 'Unknown validation error')
     throw new Error('Configuration validation failed')
   }
 
