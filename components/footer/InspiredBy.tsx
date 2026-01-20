@@ -1,0 +1,14 @@
+// import Link from "next/link";
+
+// const defaultClass =
+//   "text-foreground hover:text-muted-foreground underline underline-offset-4 transition-colors";
+
+export default function InspiredBy() {
+  return (
+    <div className="screen-line-before max-w-5xl w-full mx-auto border-x border-edge py-4">
+      <p className="text-muted-foreground hidden text-center text-sm leading-5 sm:hidden max-w-xl mx-auto">
+        Inspired by CreativeTim
+      </p>
+    </div>
+  );
+}
